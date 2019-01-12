@@ -1,9 +1,10 @@
 ---
-title: "HW1"
+title: "Sequence Alignment"
 author: "Zhao Tianxiao"
 date: "2018/10/6"
 output: pdf_document
 ---
+## The algorithm is tested in LongestCommonSeq.txt
 # 1
 ```{r}
 ## Input
@@ -74,8 +75,6 @@ while (i>1 && j>1){
 ## Output: The score 
 score[nchar(b)+1, nchar(a)+1]
 ```
-
-
 
 # 2
 ```{r}
