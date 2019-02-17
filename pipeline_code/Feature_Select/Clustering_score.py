@@ -1,18 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-
 ## BY ZHAO TIANXIAO
-
-
-# ### Minutes
-# - get_clustering_score
-# - Basic Process of Matrices
-# 
-# ### To-do
-# - knn_score
-# - clustering_scores
-
 
 import pandas as pd
 import numpy as np
@@ -23,16 +12,12 @@ from sklearn.decomposition import PCA
 import warnings
 warnings.filterwarnings('ignore')
 
-
-
 scirep_samplenames = pd.read_table('scirep_classes.txt',delimiter=',' , index_col=0)
 SCnorm_Combat_Exp = pd.read_table('SCnorm_Combat_Exp_Matrix.txt',delimiter='\t' , index_col=0)
 SCnorm_RUVs_Exp = pd.read_table('SCnorm_RUVs_Exp_Matrix.txt',delimiter='\t' , index_col=0)
 CPM_Combat_Exp = pd.read_table('CPM_Combat_Exp_Matrix.txt',delimiter='\t' , index_col=0)
 CPM_RUVs_Exp = pd.read_table('CPM_RUVs_Exp_Matrix.txt',delimiter='\t' , index_col=0)
 scirep_batch = pd.read_table('scirep_batch.txt', delimiter = ',', index_col = 0)
-
-
 
 ## Clustering Score
 def alignment_score(X, y, K=10):
@@ -116,13 +101,7 @@ def get_clustering_score(data,sampleclass,method_PCA = True,prediction_algorithm
     asw_score, nmi_score, ari_score, uca_score = clustering_scores(X_, y_, prediction_algorithm)
     return knn_score_,asw_score, nmi_score, ari_score, uca_score
 
-
-
 get_clustering_score(SCnorm_Combat_Exp, scirep_batch[['RNA Isolation batch']], method_PCA = True,prediction_algorithm='knn')
 get_clustering_score(SCnorm_RUVs_Exp, scirep_batch[['RNA Isolation batch']], method_PCA = True,prediction_algorithm='knn')
 get_clustering_score(CPM_Combat_Exp, scirep_batch[['RNA Isolation batch']], method_PCA = True,prediction_algorithm='knn')
 get_clustering_score(CPM_RUVs_Exp, scirep_batch[['RNA Isolation batch']], method_PCA = True,prediction_algorithm='knn')
-
-
-
-
