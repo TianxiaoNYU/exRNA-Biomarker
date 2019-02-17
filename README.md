@@ -1,4 +1,4 @@
-# Bioinformatics: A novel exRNA panel for cancer diagnosis
+# exRNA-Biomarker: A novel exRNA panel for cancer diagnosis
 ## This is the sample code for constructing a pipeline for novel exRNA biomarkers analysis, especially conbined with machine learning!
 
 ### What does it have
